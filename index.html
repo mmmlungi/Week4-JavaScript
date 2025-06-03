@@ -135,8 +135,10 @@
   <div class="lesson">
     <h2>lesson 8: Function return</h2>
     <pa><Strong>Concept:</Strong>Function returning values to be used elsewhere.</pa>
+
     <button onclick="runlesson8()"> calculate and explain result</button>
     <div class="output" id="addition8">Result will show here.</div>
+
     <script>
       function runlesson8(params) {
         document.getElementById("addition8").innerHTML = "10 + 7 =" + AddNumbersReturn(10,7);
@@ -144,12 +146,43 @@
       }
       function AddNumbersReturn(numb1 , numb2) {
         return numb1 + numb2;
-        
+
         
       }
     </script>
 
   </div>
+
+  
+ <!-- Lesson 9-->
+  <div class="lesson">
+    <h2>lesson 9: Variable Scopes</h2>
+    <pa><Strong>Concept:</Strong>Ubderstand where Variables can be used.</pa>
+
+    <button onclick="demostrateScope()"> demostrate when variables can be used</button>
+    <div class="output" id="scopeOutput">Click button to see variable scope in action.</div>
+
+    <script>
+      var globalVariable = "I am a global variable";
+        
+      
+      function demostrateScope() {
+        var localVariable = "I am a localVariable";
+        document.getElementById("scopeOutput").innerHTML = 
+        "Global: " + globalVariable + "<br>" + 
+        "Local: " + localVariable + "<br>" +
+        "Local variable only exist inside their function"
+
+        function demostrateLocalScope() {
+          document.getElementById("scopeOutput").innerHTML = localVariable
+          
+        }
+
+
+        
+      }
+    </script>
+
 
 
 
