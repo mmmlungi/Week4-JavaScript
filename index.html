@@ -131,6 +131,27 @@
 
  </div>
 
+ <!-- Lesson 8-->
+  <div class="lesson">
+    <h2>lesson 8: Function return</h2>
+    <pa><Strong>Concept:</Strong>Function returning values to be used elsewhere.</pa>
+    <button onclick="runlesson8()"> calculate and explain result</button>
+    <div class="output" id="addition8">Result will show here.</div>
+    <script>
+      function runlesson8(params) {
+        document.getElementById("addition8").innerHTML = "10 + 7 =" + AddNumbersReturn(10,7);
+        
+      }
+      function AddNumbersReturn(numb1 , numb2) {
+        return numb1 + numb2;
+        
+        
+      }
+    </script>
+
+  </div>
+
+
 
 </body>
 </html>
