@@ -157,7 +157,7 @@
  <!-- Lesson 9-->
   <div class="lesson">
     <h2>lesson 9: Variable Scopes</h2>
-    <pa><Strong>Concept:</Strong>Ubderstand where Variables can be used.</pa>
+    <pa><Strong>Concept:</Strong>Understand where Variables can be used.</pa>
 
     <button onclick="demostrateScope()"> demostrate when variables can be used</button>
     <div class="output" id="scopeOutput">Click button to see variable scope in action.</div>
@@ -177,15 +177,36 @@
           document.getElementById("scopeOutput").innerHTML = localVariable
           
         }
-
-
         
       }
     </script>
 
+<!-- Lesson 10 -->
+<div class="lesson">
+  <h2>Lesson 10: Mini Project - Login Form Part 1</h2>
+  <p><strong>Concept:</strong> Getting user input from form elements.</p>
 
+  <form>
+    <label for="usernameInput10">Username:</label>
+    <input type="text" id="usernameInput10" /> <br><br>
 
+    <label for="passwordInput10">Password:</label>
+    <input type="password" id="passwordInput10" /> <br><br>
 
-</body>
-</html>
+    <button type="button" onclick="verifyUser10()">Get Input Values</button>
+  </form>
 
+  <div class="output" id="message10">Enter username and password, then click the button.</div>
+</div>
+
+<script>
+  function verifyUser10() {
+    var username = document.getElementById("usernameInput10").value;
+    var password = document.getElementById("passwordInput10").value;
+
+    document.getElementById("message10").innerHTML =
+      "Username entered: " + username + "<br>Password entered: " + password;
+  }
+</script>
+
+ 
