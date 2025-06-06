@@ -249,3 +249,84 @@
     }
   }
 </script>
+
+<!-- Lesson 12-->
+
+<div class="lesson">
+  <h2>Lesson 12: The SWITCH Statement</h2>
+  <p><strong>Concept:</strong> Using SWITCH statements for multiple conditionals.</p>
+
+  <label for="weather12">Select weather:</label>
+  <select id="weather12">
+    <option value="">Choose weather</option>
+    <option value="sunny">Sunny</option>
+    <option value="rainy">Rainy</option>
+    <option value="snowy">Snowy</option>
+    <option value="windy">Windy</option>
+  </select>
+
+  <button onclick="getWeatherAdvice()">Get Advice</button>
+  <div class="output" id="advice12">Select weather and click for advice</div>
+</div>
+
+<script>
+  function getWeatherAdvice() {
+    var weatherSelected = document.getElementById("weather12").value;
+    let advice;
+
+    switch (weatherSelected) {
+      case "sunny":
+        advice = "Wear your sunglasses and sunscreen!";
+        break;
+      case "windy":
+        advice = "Wear a jacket and secure loose items.";
+        break;
+      case "rainy":
+        advice = "Don't forget an umbrella.";
+        break;
+      case "snowy":
+        advice = "Buckle up and wear warm boots.";
+        break;
+      default:
+        advice = "Please select a weather type from the list.";
+        break;
+    }
+
+    document.getElementById("advice12").innerHTML = advice;
+  }
+</script>
+
+<!-- Lesson 13-->
+ <div class="lesson">
+  <h2>Lesson 13: Numbers and strings part 1</h2>
+  <p><strong>Concept:</strong> Understand how JavaScript handles text and numbers.</p>
+
+  <button onclick="demostrateStringNumber()">Show string vs number</button>
+  <div class="output" id="stringNumberOutput">Click to 
+    see the difference between strings and numbers.</div>
+
+  <script>
+    function demonstrateStringNumber() {
+    var numberA = 5;
+    var numberB = 3;
+    var stringA = "5";
+    var stringB = "3";
+
+    document.getElementById("stringNumberOutput").innerHTML =
+      "Number addition: " + numberA + " + " + numberB + " = " + (numberA + numberB) + "<br>" +
+      "String concatenation: \"" + stringA + "\" + \"" + stringB + "\" = " + (stringA + stringB);
+      "Mixed:" + (numberA + stringB);
+  }
+</script>
+
+
+
+
+   
+
+
+
+
+  
+
+  
