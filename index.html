@@ -351,6 +351,42 @@
   </script>
 </div>
 
+<!-- Lesson 15 -->
+
+<div class="lesson">
+  <h2>Lesson 15: Numbers and Strings Part 3 - Avoiding conversion errors</h2>
+  <p><strong>Concept:</strong> Handling conversion errors and invalid inputs.</p>
+
+  <input type="text" id="safeInput1" placeholder="Enter first number">
+  <input type="text" id="safeInput2" placeholder="Enter second number">
+  <button onclick="safeConvertAndAdd()">Safe convert and Add</button>
+
+  <div class="output" id="safeOutput">Try entering both numbers and non-numbers for error handling.</div>
+
+  <script>
+    function safeConvertAndAdd() {
+      var input1 = document.getElementById("safeInput1").value;
+      var input2 = document.getElementById("safeInput2").value;
+
+      // Convert strings to integers
+      var numb1 = parseInt(input1);
+      var numb2 = parseInt(input2);
+
+      // Check for NaN (Not a Number)
+      if (isNaN(numb1) || isNaN(numb2)) {
+        document.getElementById("safeOutput").innerHTML =
+          "Error: Please enter valid numbers only!<br>" +
+          "Input 1: " + input1 + " - " + (isNaN(numb1) ? "Invalid" : "Valid") + "<br>" +
+          "Input 2: " + input2 + " - " + (isNaN(numb2) ? "Invalid" : "Valid") + "<br>";
+      } else {
+        document.getElementById("safeOutput").innerHTML =
+          "Success! " + numb1 + " + " + numb2 + " = " + (numb1 + numb2);
+      }
+    }
+  </script>
+</div>
+
+
 
 
   
